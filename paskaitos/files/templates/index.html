@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+	{% if user %}
+		<p>Sveikas {{ user }}</p>
+	{% else %}
+		<p>Vartotojas nežinomas</p>
+	{% endif %}
+
+   	<br>
+
+	{% include 'include.html' %}
+
+	<table>
+		{% for student in students_list %}
+    		<tr>
+    			<td>{{ student[0] }}</td>
+    			<td>{{ student[1] }}</td> 
+  			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}
