@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Users</title>
+</head>
+<body>
+
+    {% if users %}
+        {% for user in users %}
+            {{ user }}
+        {% endfor %}
+    {% endif %}
+
+    <form action="" method="post">
+        <p>
+            <label for="username">Username</label>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" name="email">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+
+</body>
+</html>
